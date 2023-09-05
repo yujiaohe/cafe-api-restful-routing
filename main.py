@@ -106,7 +106,7 @@ def update_price(cafe_id):
 
 
 #  HTTP DELETE - Delete Record
-@app.route("/report-closed/<int:cafe_id>")
+@app.route("/report-closed/<int:cafe_id>", methods=['DELETE'])
 def report_closed(cafe_id):
     api_key = request.args.get("api-key")
     if api_key != "TopSecretAPIKey":
